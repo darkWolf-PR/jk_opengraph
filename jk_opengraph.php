@@ -52,7 +52,7 @@ class Jk_Opengraph extends Module
     {
         $this->name = 'jk_opengraph';
         $this->tab = 'front_office_features';
-        $this->version = '1.3.2';
+        $this->version = '1.3.3';
         $this->author = 'yusttas.github.io';
         $this->need_instance = 0;
         $this->ps_versions_compliancy = array('min' => '1.7', 'max' => _PS_VERSION_);
@@ -76,7 +76,7 @@ class Jk_Opengraph extends Module
         }
 
         if (!parent::install() //Check that the module parent class is installed.
-             || !$this->registerHook('header')
+             || !$this->registerHook('displayHeader')
             || !$this->installTables()
             || !$this->installPages()
             || !$this->installConfig()
